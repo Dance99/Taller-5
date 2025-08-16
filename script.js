@@ -57,3 +57,19 @@ class GrafoDual {
             }
         }
     }
+
+    //* Use
+const grafoDirigido = new GrafoDual(true);  //* Crea una instancia del grafo dirigido
+["0", "1", "2", "3", "4", "5"].forEach(n => grafoDirigido.agregarNodo(n));  //* Agrega nodos al grafo
+
+//* Agrega aristas entre los nodos
+grafoDirigido.agregarArista("0","1");
+grafoDirigido.agregarArista("3","1");
+grafoDirigido.agregarArista("3","2");
+grafoDirigido.agregarArista("3","4");
+grafoDirigido.agregarArista("4","2");
+grafoDirigido.agregarArista("5","0");
+
+grafoDirigido.mostrarLista();
+grafoDirigido.mostrarMatriz();
+
