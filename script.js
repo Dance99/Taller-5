@@ -36,3 +36,24 @@ class GrafoDual {
         }
 
   
+         mostrarLista(){   
+        console.log(this.dirigido ? "\n LISTA DE ADYACENCIA DIRIGIDA: ": "\n LISTA DE ADYACENCIA NO DIRIGIDA: ")
+
+        //* Recorre cada nodo en la lista de adyacencia y lo imprime junto con sus nodos adyacentes
+        for (let nodo in this.listaAdyacente){
+           console.log(nodo, " -> ", this.listaAdyacente[nodo].join(", ")); 
+          }
+        }
+        //* Muestra la matriz de adyacencia en la consola
+        mostrarMatriz(){
+            console.log(this.dirigido ? "\n MATRIZ DE ADYACENCIA DIRIGIDA" : "\n MATRIZ DE ADYACENCIA NO DIRIGIDA");
+
+            //* Imprime los encabezados de la matriz (nodos)
+            console.log(" ", this.nodos.join(" "));
+
+            // Recorre cada fila de la matriz y la imprime con su nodo correspondiente
+            for (let i = 0; i<this.matriz.length; i++){  //* Recorre cada fila de la matriz
+                console.log(this.nodos[i]+" "+this.matriz[i].join(" ")); 
+            }
+        }
+    }
