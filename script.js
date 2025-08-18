@@ -73,3 +73,19 @@ grafoDirigido.agregarArista("5","0");
 grafoDirigido.mostrarLista();
 grafoDirigido.mostrarMatriz();
 
+//* Use
+//* Crea una instancia del grafo no dirigido
+const grafoNoDirigido = new GrafoDual();
+["0", "1", "2", "3", "4", "5", "6"].forEach(n => grafoNoDirigido.agregarNodo(n));
+
+grafoNoDirigido.agregarArista("0","1");
+grafoNoDirigido.agregarArista("0","2"); 
+grafoNoDirigido.agregarArista("1","2");
+grafoNoDirigido.agregarArista("1","3");
+grafoNoDirigido.agregarArista("2","4");
+grafoNoDirigido.agregarArista("3","4");
+grafoNoDirigido.agregarArista("4","5");
+grafoNoDirigido.agregarArista("5","6");
+
+grafoNoDirigido.mostrarLista();
+grafoNoDirigido.mostrarMatriz();
