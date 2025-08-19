@@ -60,15 +60,15 @@ class GrafoDual {
 
     //* Use
 const grafoDirigido = new GrafoDual(true);  //* Crea una instancia del grafo dirigido
-["0", "1", "2", "3", "4", "5"].forEach(n => grafoDirigido.agregarNodo(n));  //* Agrega nodos al grafo
+["A", "B", "C", "D", "E", "F"].forEach(n => grafoDirigido.agregarNodo(n));  //* Agrega nodos al grafo
 
 //* Agrega aristas entre los nodos
-grafoDirigido.agregarArista("0","1");
-grafoDirigido.agregarArista("3","1");
-grafoDirigido.agregarArista("3","2");
-grafoDirigido.agregarArista("3","4");
-grafoDirigido.agregarArista("4","2");
-grafoDirigido.agregarArista("5","0");
+grafoDirigido.agregarArista("A","B");
+grafoDirigido.agregarArista("A","C");
+grafoDirigido.agregarArista("B","C");
+grafoDirigido.agregarArista("B","E");
+grafoDirigido.agregarArista("E","C");
+grafoDirigido.agregarArista("F","A");
 
 grafoDirigido.mostrarLista();
 grafoDirigido.mostrarMatriz();
@@ -76,16 +76,15 @@ grafoDirigido.mostrarMatriz();
 //* Use
 //* Crea una instancia del grafo no dirigido
 const grafoNoDirigido = new GrafoDual();
-["0", "1", "2", "3", "4", "5", "6"].forEach(n => grafoNoDirigido.agregarNodo(n));
+["A", "B", "C", "D", "E", "F"].forEach(n => grafoNoDirigido.agregarNodo(n));
 
-grafoNoDirigido.agregarArista("0","1");
-grafoNoDirigido.agregarArista("0","2"); 
-grafoNoDirigido.agregarArista("1","2");
-grafoNoDirigido.agregarArista("1","3");
-grafoNoDirigido.agregarArista("2","4");
-grafoNoDirigido.agregarArista("3","4");
-grafoNoDirigido.agregarArista("4","5");
-grafoNoDirigido.agregarArista("5","6");
+grafoNoDirigido.agregarArista("A","B");
+grafoNoDirigido.agregarArista("A","C"); 
+grafoNoDirigido.agregarArista("B","C");
+grafoNoDirigido.agregarArista("B","D");
+grafoNoDirigido.agregarArista("C","E");
+grafoNoDirigido.agregarArista("D","E");
+grafoNoDirigido.agregarArista("E","F");
 
 grafoNoDirigido.mostrarLista();
 grafoNoDirigido.mostrarMatriz();
