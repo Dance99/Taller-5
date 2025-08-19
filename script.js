@@ -68,7 +68,8 @@ grafoDirigido.agregarArista("A","C");
 grafoDirigido.agregarArista("B","C");
 grafoDirigido.agregarArista("B","E");
 grafoDirigido.agregarArista("E","C");
-grafoDirigido.agregarArista("F","A");
+grafoDirigido.agregarArista("F","B");
+grafoDirigido.agregarArista("D","F");
 
 grafoDirigido.mostrarLista();
 grafoDirigido.mostrarMatriz();
